@@ -13,7 +13,7 @@ input_method = HiddenInputField
 
 [project]
 title = MyTutorialPlatformer
-developer = Pawel Jarosz
-version = 0.1
-publisher = Pawel Jarosz
+developer = Paweł Jarosz
+version = 0.2
+publisher = Paweł Jarosz
 

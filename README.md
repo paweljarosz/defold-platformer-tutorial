@@ -14,6 +14,14 @@ Each commit here is made at the end of each video, so you can travel through the
 * Adding sprite representing our hero
 * Running game
 
+## Part 2 - v0.2
+
+* Setting up input bindings
+* Writing script for handling inputs
+* Adding functionality to move game object according to inputs
+* Adding functionality to play animations and flip sprites according to direction
+* Attaching script to game object as component
+
 ---
 
 LICENSE: MIT
