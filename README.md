@@ -22,6 +22,13 @@ Each commit here is made at the end of each video, so you can travel through the
 * Adding functionality to play animations and flip sprites according to direction
 * Attaching script to game object as component
 
+## Part 3 - v0.3
+
+* Adding gravity and velocity based movement implementation
+* Adding collision objects to level and hero character
+* Adding collision shapes based on primitive shape and tilesource
+* Adding collision handling between hero and level
+
 ---
 
 LICENSE: MIT
