@@ -29,6 +29,12 @@ Each commit here is made at the end of each video, so you can travel through the
 * Adding collision shapes based on primitive shape and tilesource
 * Adding collision handling between hero and level
 
+## Part 4 - v0.4
+
+* Adding jumping mechanics
+* Adding compensation function for collision handling
+
+
 ---
 
 LICENSE: MIT
