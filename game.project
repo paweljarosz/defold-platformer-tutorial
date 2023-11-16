@@ -14,7 +14,7 @@ input_method = HiddenInputField
 [project]
 title = MyTutorialPlatformer
 developer = Paweł Jarosz
-version = 0.4
+version = 0.5
 publisher = Paweł Jarosz
 
 [physics]

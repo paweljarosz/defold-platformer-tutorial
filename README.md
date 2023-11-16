@@ -34,6 +34,12 @@ Each commit here is made at the end of each video, so you can travel through the
 * Adding jumping mechanics
 * Adding compensation function for collision handling
 
+## Part 5 - v0.5
+
+* Improving compensation function
+* Adding particleFX and changing script to play it when jumping and landing.
+* Adding sound components and playing them when jumping and landing.
+
 
 ---
 

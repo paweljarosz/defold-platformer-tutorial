@@ -9,6 +9,7 @@ function init(self)
 
 	self.velocity = vmath.vector3(0, 0, 0)
 	self.ground_contact = false
+	self.previous_ground_contact = false
 	self.correction = vmath.vector3(0, 0, 0)
 end
 
@@ -54,6 +55,7 @@ function fixed_update(self, dt)
 	if self.ground_contact then
 		self.velocity.y = 0
 	end
+	self.previous_ground_contact = self.ground_contact
 	
 	local position = go.get_position() -- get current game object's position
 	position = position + self.velocity * dt
@@ -69,13 +71,11 @@ end
 
 function handle_level_collisions(self, normal, distance)
 
-	distance = distance * vmath.length(normal) -- normal distance compensation
-
 	if distance > 0 then
 		-- project accumulated correction onto the penetration vector
-		local projection = vmath.project(self.correction, normal * distance)
-		if projection < 1 then	-- exclude overshoot projection
-			local compensation = (distance - distance * projection) * normal
+		local extent = vmath.project(self.correction, normal * distance)
+		if extent < 1 then	-- exclude overshoot projection
+			local compensation = (distance - distance * extent) * normal
 			go.set_position(go.get_position() + compensation) -- appply compensation instantly
 			self.correction = self.correction + compensation -- accumulate the correction
 		end
@@ -88,6 +88,10 @@ function handle_level_collisions(self, normal, distance)
 
 	-- on the ground
 	if normal.y > 0 then
+		if not self.previous_ground_contact then
+			particlefx.play("#dust")
+			sound.play("#land")
+		end
 		self.ground_contact = true
 		self.velocity.y = 0
 	end
@@ -113,5 +117,7 @@ function on_input(self, action_id, action)
 	elseif action.pressed and self.ground_contact then
 		self.velocity.y = JUMP_TAKEOFF
 		self.ground_contact = false
+		particlefx.play("#dust")
+		sound.play("#jump")
 	end
 end
