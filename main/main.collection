@@ -2,6 +2,7 @@ name: "main"
 scale_along_z: 0
 embedded_instances {
   id: "hero"
+  children: "operator"
   data: "components {\n"
   "  id: \"hero\"\n"
   "  component: \"/main/hero.script\"\n"
@@ -286,7 +287,50 @@ embedded_instances {
   position {
     x: 510.0
     y: 537.0
+    z: -100.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
     z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.5
+    y: 1.5
+    z: 1.5
+  }
+}
+embedded_instances {
+  id: "operator"
+  data: "embedded_components {\n"
+  "  id: \"camera\"\n"
+  "  type: \"camera\"\n"
+  "  data: \"aspect_ratio: 1.0\\n"
+  "fov: 0.7854\\n"
+  "near_z: 0.1\\n"
+  "far_z: 800.0\\n"
+  "auto_aspect_ratio: 1\\n"
+  "orthographic_projection: 1\\n"
+  "orthographic_zoom: 1.0\\n"
+  "\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 540.0
   }
   rotation {
     x: 0.0
