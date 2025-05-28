@@ -4,41 +4,59 @@ This repository follows the [Platformer Tutorial for Defold Game Engine video se
 
 Each commit here is made at the end of each video, so you can travel through the history or look up the final code whenever needed.
 
-## Part 1 - v0.1
+## Part 1 - v0.1 - Atlases and Tilemaps
 
-* Setting up project
-* Adding basic visual assets ([thanks to Kenney!](https://kenney.nl))
-* Making atlas with images
-* Making tilesource
-* Creating level scene with tilemaps
-* Adding sprite representing our hero
-* Running game
+[▶️ Part 1 video](https://youtu.be/R4oEB6e8G0A?si=-VAiJ0RatwqrcsjO)
 
-## Part 2 - v0.2
+* Setting up project.
+* Adding basic visual assets ([thanks to Kenney!](https://kenney.nl)).
+* Making atlas with images.
+* Making tilesource.
+* Creating level scene with tilemaps.
+* Adding sprite representing our hero.
+* Running game.
 
-* Setting up input bindings
-* Writing script for handling inputs
-* Adding functionality to move game object according to inputs
-* Adding functionality to play animations and flip sprites according to direction
-* Attaching script to game object as component
+## Part 2 - v0.2 - Script, movement and animations
 
-## Part 3 - v0.3
+[▶️ Part 2 video](https://youtu.be/R4oEB6e8G0A?si=R2uOHRyPF8PNp_wH)
 
-* Adding gravity and velocity based movement implementation
-* Adding collision objects to level and hero character
-* Adding collision shapes based on primitive shape and tilesource
-* Adding collision handling between hero and level
+* Setting up input bindings.
+* Writing script for handling inputs.
+* Adding functionality to move game object according to inputs.
+* Adding functionality to play animations and flip sprites according to direction.
+* Attaching script to game object as component.
 
-## Part 4 - v0.4
+## Part 3 - v0.3 - Gravity and Collisions
 
-* Adding jumping mechanics
-* Adding compensation function for collision handling
+[▶️ Part 3 video](https://youtu.be/V3iJtpvAOxU?si=yo4clxnFh0PcUWrS)
 
-## Part 5 - v0.5
+* Adding gravity and velocity based movement implementation.
+* Adding collision objects to level and hero character.
+* Adding collision shapes based on primitive shape and tilesource.
+* Adding collision handling between hero and level.
 
-* Improving compensation function
+## Part 4 - v0.4 - Jumping
+
+[▶️ Part 4 video](https://youtu.be/F5XMemcAwmE?si=iWULSENETaeVGoun)
+
+* Adding jumping mechanics.
+* Adding compensation function for collision handling.
+
+## Part 5 - v0.5 - Particle and Sound FX
+
+[▶️ Part 5 video](https://youtu.be/XCLh54jkzCw?si=zHd0p97N76oaCgp_)
+
+* Improving compensation function.
 * Adding particleFX and changing script to play it when jumping and landing.
 * Adding sound components and playing them when jumping and landing.
+
+## Part 6 - v0.6 - Camera
+
+[▶️ Part 6 video](https://youtu.be/9OTxUPEu_s4?si=_zHubkKYARhJLJU0)
+
+* Adding camera component following player character.
+* Difference between perspective and orthographic camera and other properties.
+
 
 
 ---

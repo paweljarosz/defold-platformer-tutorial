@@ -15,22 +15,22 @@ function init(self)
 	self.correction = vmath.vector3(0, 0, 0)
 end
 
-function walk(self)
+local function walk(self)
 	self.velocity.x = BASE_VELOCITY * self.direction
 end
 
-function flip(direction)
+local function flip(direction)
 	sprite.set_hflip("#sprite", direction < 0)
 end
 
-function play_animation(self, new_animation)
+local function play_animation(self, new_animation)
 	if self.animation ~= new_animation then
 		sprite.play_flipbook("#sprite", new_animation)
 		self.animation = new_animation
 	end
 end
 
-function animate(self)
+local function animate(self)
 	if self.ground_contact then
 		if self.velocity.x == 0 then
 			play_animation(self, "idle")
@@ -71,7 +71,7 @@ function fixed_update(self, dt)
 	self.correction.y = 0
 end
 
-function handle_level_collisions(self, normal, distance)
+local function handle_level_collisions(self, normal, distance)
 
 	if distance > 0 then
 		-- project accumulated correction onto the penetration vector
