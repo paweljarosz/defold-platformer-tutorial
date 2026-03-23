@@ -1,0 +1,14 @@
+function init(self)
+	msg.post("#", "update_health", { health = 1.0 })
+	msg.post("#", "update_score", { score = 0 })
+end
+
+function on_message(self, message_id, message, sender)
+	if message_id == hash "update_health" then
+		local health_scale = gui.get_scale(gui.get_node("health"))
+		health_scale.x = health_scale.x * message.health
+		gui.set_scale(gui.get_node("health"), health_scale)
+	elseif message_id == hash "update_score" then
+		gui.set_text(gui.get_node("score"), "Score: " .. message.score)
+	end
+end

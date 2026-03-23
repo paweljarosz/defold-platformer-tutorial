@@ -1,0 +1,115 @@
+script: "/main/main.gui_script"
+fonts {
+  name: "gui"
+  font: "/assets/fonts/gui.font"
+}
+nodes {
+  position {
+    x: 480.0
+    y: 320.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "root"
+  adjust_mode: ADJUST_MODE_STRETCH
+  layer: "img"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  position {
+    x: -450.0
+    y: 280.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "Anchor_NW"
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "root"
+  layer: "img"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  size {
+    x: 300.0
+    y: 30.0
+  }
+  color {
+    x: 0.5019608
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "background"
+  pivot: PIVOT_W
+  parent: "Anchor_NW"
+  layer: "img"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  size {
+    x: 300.0
+    y: 30.0
+  }
+  color {
+    y: 0.0
+    z: 0.0
+  }
+  type: TYPE_BOX
+  id: "health"
+  pivot: PIVOT_W
+  parent: "Anchor_NW"
+  layer: "img"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+}
+nodes {
+  position {
+    x: 450.0
+    y: 280.0
+  }
+  size {
+    x: 200.0
+    y: 100.0
+  }
+  type: TYPE_BOX
+  id: "Anchor_NE"
+  adjust_mode: ADJUST_MODE_STRETCH
+  parent: "root"
+  layer: "img"
+  inherit_alpha: true
+  size_mode: SIZE_MODE_AUTO
+  visible: false
+}
+nodes {
+  size {
+    x: 200.0
+    y: 50.0
+  }
+  type: TYPE_TEXT
+  text: "Score:"
+  font: "gui"
+  id: "score"
+  pivot: PIVOT_E
+  parent: "Anchor_NE"
+  layer: "txt"
+  inherit_alpha: true
+}
+layers {
+  name: "img"
+}
+layers {
+  name: "txt"
+}
+material: "/builtins/materials/gui.material"
+adjust_reference: ADJUST_REFERENCE_PARENT

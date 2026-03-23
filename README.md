@@ -57,6 +57,13 @@ Each commit here is made at the end of each video, so you can travel through the
 * Adding camera component following player character.
 * Difference between perspective and orthographic camera and other properties.
 
+## Part 7 - v0.7 - GUI
+
+[▶️ Part 7 video](https://www.youtube.com/watch?v=CyLkc11IIGk)
+
+* Adding GUI with simple health bar and scoring.
+* Controlling GUI via messages passed to the GUI script.
+* Good practices for making GUIs.
 
 
 ---
